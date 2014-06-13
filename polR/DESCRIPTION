@@ -1,0 +1,18 @@
+Package: polR
+Type: Package
+Title: R interface to government data API.
+Description: R interface to some government data APIs provided by various
+    institutions, in various levels, of various countries.
+Version: 1.0
+Date: 2014-06-13
+Authors@R: c(person("Eunjeong", "Park", role = c("aut", "cre"),
+    email = "ejpark04@snu.ac.kr"),
+    person("Jonghee", "Park", role = "aut",
+    email = "jongheepark@snu.ac.kr"))
+Author: Eunjeong Park and Jonghee Park
+Maintainer: Eunjeong Park <ejpark04@snu.ac.kr>
+License: Apache v2.0
+Imports:
+    httr
+URL: http://bitbucket.org/e9t/polR
+BugReports: https://bitbucket.org/e9t/polr/issues
