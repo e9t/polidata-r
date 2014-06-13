@@ -1,0 +1,29 @@
+{
+    "google": [
+        {
+            "countries": ["US"],
+            "levels": ["national"],
+            "methods": ["elections", "voterinfo", "representatives"],
+            "url": "https://www.googleapis.com/civicinfo/v1",
+            "version": "1.0"
+        }
+    ],
+    "popong": [
+        {
+            "countries": ["KR"],
+            "levels": ["national"],
+            "methods": ["bill", "person", "party"],
+            "url": "http://api.popong.com",
+            "version": "0.1"
+        }
+    ],
+    "sunlight": [
+        {
+            "countries": ["US"],
+            "levels": ["national"],
+            "methods": ["legislators", "committees", "bills", "amendments", "nominations", "votes", "floor_updates", "hearings", "upcoming_bills"],
+            "url": "https://congress.api.sunlightfoundation.com",
+            "version": "3.0"
+        }
+    ]
+}
