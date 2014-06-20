@@ -9,7 +9,7 @@ PopongAPI <- function(method, region="korea", key=getOption("polrPopongKey")) {
     # TODO: get API key with `getOption`
     apiSource   <- "popong"
     apiInfo     <- eval(parse(text=sprintf("api$%s", apiSource)))
-    apiVersion  <- paste("v", apiInfo$version, sep="")
+    apiVersion  <- paste0("v", apiInfo$version)
 
     .MethodInAPI(apiSource, method)
 
