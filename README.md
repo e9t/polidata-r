@@ -18,6 +18,10 @@ Call API with method type.
     PopongAPI("bill")
     PopongAPI("party")
     PopongAPI("person")
+    SunlightAPI("legislators")
+    SunlightAPI("committees")
+    SunlightAPI("bills")
+    SunlightAPI("votes")
 
 ## License
 [Apache Licence 2.0](http://www.apache.org/licenses/LICENSE-2.0)

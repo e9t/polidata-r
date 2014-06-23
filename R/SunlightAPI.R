@@ -17,9 +17,8 @@ SunlightAPI <- function(method, region="korea", key=getOption("polrSunlightKey")
     # TODO: get multiple args
     args <- sprintf("apikey=%s", key)
     url <- paste(baseurl, args, sep="?")
-    print(url)
     # TODO: convert request elements' encoding
     response <- jsonlite::fromJSON(url)
 
-    return(response$items)
+    return(response$results)
 }
