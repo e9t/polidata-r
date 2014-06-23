@@ -11,7 +11,7 @@ PopongAPI <- function(method, region="korea", key=getOption("polrPopongKey")) {
     apiInfo     <- eval(parse(text=sprintf("api$%s", apiSource)))
     apiVersion  <- paste0("v", apiInfo$version)
 
-    .MethodInAPI(apiSource, method)
+    MethodInAPI(apiSource, method)
 
     baseurl <- paste(apiInfo$url, apiVersion, method, sep="/")
     # TODO: get multiple args

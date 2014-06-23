@@ -11,7 +11,7 @@ SunlightAPI <- function(method, region="korea", key=getOption("polrSunlightKey")
     apiInfo     <- eval(parse(text=sprintf("api$%s", apiSource)))
     #apiVersion  <- NULL
 
-    .MethodInAPI(apiSource, method)
+    MethodInAPI(apiSource, method)
 
     baseurl <- paste(apiInfo$url, method, sep="/")
     # TODO: get multiple args
