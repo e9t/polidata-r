@@ -8,12 +8,12 @@ PopongAPI <- function(method, region="korea", key=getOption("polrPopongKey")) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
     apiSource   <- "popong"
-    apiInfo     <- eval(parse(text=sprintf("api$%s", apiSource)))
-    apiVersion  <- paste0("v", apiInfo$version)
+    apiAttrs    <- eval(parse(text=sprintf("apiInfo$%s", apiSource)))
+    apiVersion  <- paste0("v", apiAttrs$version)
 
     MethodInAPI(apiSource, method)
 
-    baseurl <- paste(apiInfo$url, apiVersion, method, sep="/")
+    baseurl <- paste(apiAttrs$url, apiVersion, method, sep="/")
     # TODO: get multiple args
     args <- sprintf("api_key=%s", key)
     url <- paste(baseurl, args, sep="/?")

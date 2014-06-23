@@ -1,11 +1,11 @@
 .apiJson <- system.file("extdata", "api.json", package="polR")
 
 
-#' @export api
-api <- jsonlite::fromJSON(.apiJson)
+#' @export apiInfo
+apiInfo <- jsonlite::fromJSON(.apiJson)
 
 
-apiSources <- sapply(ls(api), Capitalize)
+apiSources <- sapply(ls(apiInfo), Capitalize)
 
 
 GetAPIKey <- function(apiSource) {
@@ -16,7 +16,7 @@ GetAPIKey <- function(apiSource) {
 
 
 MethodInAPI <- function(apiSource, method) {
-    .methods <- eval(parse(text=sprintf("api$%s$methods", apiSource)))[[1]]
+    .methods <- eval(parse(text=sprintf("apiInfo$%s$methods", apiSource)))[[1]]
     if(!(is.element(method, .methods))) {
         stop("Please check the method name.")
     }
