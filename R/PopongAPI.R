@@ -13,10 +13,9 @@ PopongAPI <- function(method, region="korea", key=getOption("polrPopongKey")) {
 
     MethodInAPI(apiSource, method)
 
-    baseurl <- paste(apiAttrs$url, apiVersion, method, sep="/")
-    # TODO: get multiple args
-    args <- sprintf("api_key=%s", key)
-    url <- paste(baseurl, args, sep="/?")
+    paths <- c(apiAttrs$url, apiVersion, method)
+    args  <- list("api_key"=key)
+    url   <- FormatURL(paths, args)
     # TODO: convert request elements' encoding
     response <- jsonlite::fromJSON(url)
 

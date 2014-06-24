@@ -9,14 +9,12 @@ SunlightAPI <- function(method, region="korea", key=getOption("polrSunlightKey")
     # TODO: get API key with `getOption`
     apiSource   <- "sunlight"
     apiAttrs    <- eval(parse(text=sprintf("apiInfo$%s", apiSource)))
-    #apiVersion  <- NULL
 
     MethodInAPI(apiSource, method)
 
-    baseurl <- paste(apiAttrs$url, method, sep="/")
-    # TODO: get multiple args
-    args <- sprintf("apikey=%s", key)
-    url <- paste(baseurl, args, sep="?")
+    paths <- c(apiAttrs$url, method)
+    args  <- list("apikey"=key)
+    url   <- FormatURL(paths, args)
     # TODO: convert request elements' encoding
     response <- jsonlite::fromJSON(url)
 
