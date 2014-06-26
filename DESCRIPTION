@@ -1,4 +1,4 @@
-Package: polR
+Package: polr
 Type: Package
 Title: R interface to government data API.
 Description: R interface to some government data APIs provided by various
@@ -14,5 +14,5 @@ Maintainer: Eunjeong Park <ejpark04@snu.ac.kr>
 License: Apache License 2.0
 Imports:
     jsonlite
-URL: http://bitbucket.org/e9t/polR
+URL: http://bitbucket.org/e9t/polr
 BugReports: https://bitbucket.org/e9t/polr/issues

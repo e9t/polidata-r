@@ -1,16 +1,16 @@
-# polR
+# polr
 
 Political data interface in R.
 
 ## Usage
 
-Install `polR` from source.
+Install `polr` from source.
 
-    install.packages("/path/to/polR", type="source", repos=NULL)
+    install.packages("/path/to/polr", type="source", repos=NULL)
 
-Import `polR`, and initialize with API keys.
+Import `polr`, and initialize with API keys.
 
-    library("polR")
+    library("polr")
     InitPolr()
 
 Call API with method type.

@@ -1,4 +1,4 @@
-.apiJson <- system.file("extdata", "api.json", package="polR")
+.apiJson <- system.file("extdata", "api.json", package="polr")
 
 
 #' @export apiInfo

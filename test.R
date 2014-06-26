@@ -1,12 +1,12 @@
-# This is a test file for polR
+# This is a test file for polr
 
 wd <- '.' # Input your working directory
 setwd(wd)
 
-devtools::document('polR')
-install.packages("polR", type="source", repos=NULL)
-library("polR")
-ls("package:polR")
+devtools::document('polr')
+install.packages("polr", type="source", repos=NULL)
+library("polr")
+ls("package:polr")
 InitPolr()
 ShowAPIKeys()
 PopongAPI("bill")
