@@ -3,10 +3,10 @@ Capitalize <- function(x) {
     paste(toupper(substring(s, 1, 1)), substring(s, 2), sep = "", collapse = " ")
 }
 
-FormatURL <- function(paths, args) {
+FormatURL <- function(paths, query) {
     pathstr <- paste(paths, collapse="/")
-    argstr <- paste(names(args), args, sep="=", collapse="&")
-    url <- paste(pathstr, argstr, sep="?")
+    querystr <- paste(names(query), query, sep="=", collapse="&")
+    url <- paste(pathstr, querystr, sep="?")
     return (url)
 }
 

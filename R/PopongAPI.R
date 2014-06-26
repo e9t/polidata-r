@@ -14,8 +14,8 @@ PopongAPI <- function(method, key=getOption("polrPopongKey")) {
     MethodInAPI(apiSource, method)
 
     paths <- c(apiAttrs$url, apiVersion, method)
-    args  <- list("api_key"=key)
-    url   <- FormatURL(paths, args)
+    query  <- list("api_key"=key)
+    url   <- FormatURL(paths, query)
     # TODO: convert request elements' encoding
     response <- jsonlite::fromJSON(url)
 

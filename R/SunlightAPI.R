@@ -13,8 +13,8 @@ SunlightAPI <- function(method, key=getOption("polrSunlightKey")) {
     MethodInAPI(apiSource, method)
 
     paths <- c(apiAttrs$url, method)
-    args  <- list("apikey"=key)
-    url   <- FormatURL(paths, args)
+    query <- list("apikey"=key)
+    url   <- FormatURL(paths, query)
     # TODO: convert request elements' encoding
     response <- jsonlite::fromJSON(url)
 

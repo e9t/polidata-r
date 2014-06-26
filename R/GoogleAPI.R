@@ -4,8 +4,6 @@
 #'
 #' @export
 
-# TODO: get additional args
-
 GoogleAPI <- function(method, key=getOption("polrGoogleKey")) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
@@ -16,8 +14,8 @@ GoogleAPI <- function(method, key=getOption("polrGoogleKey")) {
     MethodInAPI(apiSource, method)
 
     paths <- c(apiAttrs$url, apiVersion, method)
-    args  <- list("key"=key)
-    url   <- FormatURL(paths, args)
+    query  <- list("key"=key)
+    url   <- FormatURL(paths, query)
     # TODO: convert request elements' encoding
     response <- jsonlite::fromJSON(url)
 
