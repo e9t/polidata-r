@@ -4,7 +4,7 @@
 #'
 #' @export
 
-PopongAPI <- function(method, region="korea", key=getOption("polrPopongKey")) {
+PopongAPI <- function(method, key=getOption("polrPopongKey")) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
     apiSource   <- "popong"

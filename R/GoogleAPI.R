@@ -6,7 +6,7 @@
 
 # TODO: get additional args
 
-GoogleAPI <- function(method, region="korea", key=getOption("polrGoogleKey")) {
+GoogleAPI <- function(method, key=getOption("polrGoogleKey")) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
     apiSource   <- "google"

@@ -4,7 +4,7 @@
 #'
 #' @export
 
-SunlightAPI <- function(method, region="korea", key=getOption("polrSunlightKey")) {
+SunlightAPI <- function(method, key=getOption("polrSunlightKey")) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
     apiSource   <- "sunlight"
