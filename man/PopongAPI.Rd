@@ -2,7 +2,7 @@
 \alias{PopongAPI}
 \title{R interface for Popong API}
 \usage{
-PopongAPI(method, region = "korea", key = getOption("polrPopongKey"))
+PopongAPI(method, key = getOption("polrPopongKey"))
 }
 \description{
 See \url{(http://data.popong.com)}

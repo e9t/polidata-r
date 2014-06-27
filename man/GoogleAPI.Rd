@@ -2,7 +2,7 @@
 \alias{GoogleAPI}
 \title{R interface for Google Civic API}
 \usage{
-GoogleAPI(method, region = "korea", key = getOption("polrGoogleKey"))
+GoogleAPI(method, key = getOption("polrGoogleKey"))
 }
 \description{
 See
