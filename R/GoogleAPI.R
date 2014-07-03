@@ -6,13 +6,14 @@
 #' @export
 #' @param method method to call
 #' @param key API key
+#' @param debug Enable debugging mode
 #' @keywords API
 #' @seealso \code{\link{PopongAPI}}, \code{\link{SunlightAPI}}
 #'
 #' @examples
 #' TBD
 
-GoogleAPI <- function(method, key=getOption("polrGoogleKey")) {
+GoogleAPI <- function(method, key=getOption("polrGoogleKey"), debug=FALSE) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
     apiSource   <- "google"
@@ -26,6 +27,7 @@ GoogleAPI <- function(method, key=getOption("polrGoogleKey")) {
     url   <- FormatURL(paths, query)
     jsontext <- RCurl::getURL(url)
     response <- jsonlite::fromJSON(jsontext)
+    if(debug) { print(url) }
 
     return(response)
 }
