@@ -2,9 +2,17 @@
 #'
 #' See \url{(https://developers.google.com/civic-information/)}
 #'
+#' @import jsonlite
 #' @export
+#' @param method method to call
+#' @param key API key
+#' @keywords API
+#' @seealso \code{\link{PopongAPI}}, \code{\link{SunlightAPI}}
+#'
+#' @examples
+#' TBD
 
-GoogleAPI <- function(method, region = "korea", key=getOption("polrGoogleKey")) {
+GoogleAPI <- function(method, key=getOption("polrGoogleKey")) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
     apiSource   <- "google"

@@ -2,9 +2,17 @@
 #'
 #' See \url{(https://sunlightlabs.github.io/congress/)}
 #'
+#' @import jsonlite
 #' @export
+#' @param method method to call
+#' @param key API key
+#' @keywords API
+#' @seealso \code{\link{GoogleAPI}}, \code{\link{PopongAP}}
+#'
+#' @examples
+#' TBD
 
-SunlightAPI <- function(method,  region="korea", key=getOption("polrSunlightKey")) {
+SunlightAPI <- function(method, key=getOption("polrSunlightKey")) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
     apiSource   <- "sunlight"

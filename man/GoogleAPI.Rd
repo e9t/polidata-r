@@ -2,25 +2,22 @@
 \alias{GoogleAPI}
 \title{R interface for Google Civic API}
 \usage{
-GoogleAPI(method, region = "korea", key = getOption("polrGoogleKey"))
+GoogleAPI(method, key = getOption("polrGoogleKey"))
 }
-\description{R interface for Google Civic API}
 \arguments{
-  \item{method}{method chooses }
-  \item{region}{region is for }
-  \item{key}{key is the target}
-}
+  \item{method}{method to call}
 
-\value{
+  \item{key}{API key}
 }
-\details{
+\description{
 See
 \url{(https://developers.google.com/civic-information/)}
 }
-\seealso{ \code{PopongAPI}, \code{SunlightgAPI}  }
-
 \examples{
-
+TBD
 }
-
+\seealso{
+\code{\link{PopongAPI}}, \code{\link{SunlightAPI}}
+}
 \keyword{API}
+

@@ -2,25 +2,21 @@
 \alias{SunlightAPI}
 \title{R interface for Sunlight API}
 \usage{
-SunlightAPI(method, region = "korea", key = getOption("polrSunlightKey"))
+SunlightAPI(method, key = getOption("polrSunlightKey"))
 }
-\description{R interface for Sunlight API}
 \arguments{
-  \item{method}{method chooses }
-  \item{region}{region is for }
-  \item{key}{key is the target}
-}
+  \item{method}{method to call}
 
-\value{
+  \item{key}{API key}
 }
-\details{
-See
-\url{(https://sunlightlabs.github.io/congress/) ([register](http://sunlightfoundation.com/api/)}
+\description{
+See \url{(https://sunlightlabs.github.io/congress/)}
 }
-\seealso{ \code{GoogleAPI}, \code{PopongAPI}  }
-
 \examples{
-
+TBD
 }
-
+\seealso{
+\code{\link{GoogleAPI}}, \code{\link{PopongAP}}
+}
 \keyword{API}
+

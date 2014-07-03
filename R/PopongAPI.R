@@ -2,9 +2,17 @@
 #'
 #' See \url{(http://data.popong.com)}
 #'
+#' @import jsonlite
 #' @export
+#' @param method method to call
+#' @param key API key
+#' @keywords API
+#' @seealso \code{\link{GoogleAPI}}, \code{\link{SunlightAPI}}
+#'
+#' @examples
+#' TBD
 
-PopongAPI <- function(method, region="korea", key=getOption("polrPopongKey")) {
+PopongAPI <- function(method, key=getOption("polrPopongKey")) {
     # TODO: auto navigate pages
     # TODO: get API key with `getOption`
     apiSource   <- "popong"
