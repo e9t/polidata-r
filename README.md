@@ -4,11 +4,6 @@ Political data interface in R.
 
 ## Usage
 
-Get API keys.
-
-- [Google Civic API](https://developers.google.com/civic-information/docs/using_api)
-- [Sunlight Congress API](http://sunlightfoundation.com/api/accounts/register/)
-
 Install `polr` from source.
 
     install.packages("/path/to/polr", type="source", repos=NULL)

@@ -1,6 +1,8 @@
-export(GoogleAPI)
-export(InitPolr)
-export(PopongAPI)
-export(ShowAPIKeys)
-export(SunlightAPI)
-export(apiInfo)
+import(jsonlite)
+
+export(GoogleAPI,
+       InitPolr,
+       PopongAPI,
+       ShowAPIKeys,
+       SunlightAPI,
+       apiInfo)
