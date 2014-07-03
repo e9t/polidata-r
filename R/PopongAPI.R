@@ -21,7 +21,7 @@ PopongAPI <- function(method, key=getOption("polrPopongKey")) {
 
     MethodInAPI(apiSource, method)
 
-    paths <- c(apiAttrs$url, apiVersion, method)
+    paths <- c(apiAttrs$url, apiVersion, method, "")
     query  <- list("api_key"=key)
     url   <- FormatURL(paths, query)
     print(url)
