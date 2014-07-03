@@ -2,7 +2,7 @@
 #'
 #' See \url{(http://data.popong.com)}
 #'
-#' @import jsonlite
+#' @import jsonlite RCurl
 #' @export
 #' @param method method to call
 #' @param key API key
@@ -24,8 +24,9 @@ PopongAPI <- function(method, key=getOption("polrPopongKey")) {
     paths <- c(apiAttrs$url, apiVersion, method)
     query  <- list("api_key"=key)
     url   <- FormatURL(paths, query)
-    # TODO: convert request elements' encoding
-    response <- jsonlite::fromJSON(url)
+    print(url)
+    jsontext <- RCurl::getURL(url)
+    response <- jsonlite::fromJSON(jsontext)
 
     return(response$items)
 }

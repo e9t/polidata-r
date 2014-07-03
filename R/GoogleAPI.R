@@ -2,7 +2,7 @@
 #'
 #' See \url{(https://developers.google.com/civic-information/)}
 #'
-#' @import jsonlite
+#' @import jsonlite RCurl
 #' @export
 #' @param method method to call
 #' @param key API key
@@ -24,8 +24,8 @@ GoogleAPI <- function(method, key=getOption("polrGoogleKey")) {
     paths <- c(apiAttrs$url, apiVersion, method)
     query  <- list("key"=key)
     url   <- FormatURL(paths, query)
-    # TODO: convert request elements' encoding
-    response <- jsonlite::fromJSON(url)
+    jsontext <- RCurl::getURL(url)
+    response <- jsonlite::fromJSON(jsontext)
 
     return(response)
 }
