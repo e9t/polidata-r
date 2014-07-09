@@ -10,8 +10,6 @@
 #' @keywords API
 #' @seealso \code{\link{GoogleAPI}}, \code{\link{PopongAP}}
 #'
-#' @examples
-#' TBD
 
 SunlightAPI <- function(method, key=getOption("polrSunlightKey"), debug=FALSE) {
     # TODO: auto navigate pages
