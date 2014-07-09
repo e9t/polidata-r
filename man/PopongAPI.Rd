@@ -2,10 +2,15 @@
 \alias{PopongAPI}
 \title{R interface for Popong API}
 \usage{
-PopongAPI(method, key = getOption("polrPopongKey"), debug = FALSE)
+PopongAPI(method, search = NULL, getSummary = FALSE,
+  key = getOption("polrPopongKey"), debug = FALSE)
 }
 \arguments{
-  \item{method}{method to call}
+  \item{method}{Method to call}
+
+  \item{search}{Search term for names}
+
+  \item{getSummary}{Toggle to get summary data}
 
   \item{key}{API key}
 
