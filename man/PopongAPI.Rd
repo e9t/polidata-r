@@ -13,7 +13,7 @@ PopongAPI(method, key = getOption("polrPopongKey"))
 See \url{(http://data.popong.com)}
 }
 \examples{
-TBD
+
 }
 \seealso{
 \code{\link{GoogleAPI}}, \code{\link{SunlightAPI}}

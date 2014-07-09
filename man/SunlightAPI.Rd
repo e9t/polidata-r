@@ -13,7 +13,7 @@ SunlightAPI(method, key = getOption("polrSunlightKey"))
 See \url{(https://sunlightlabs.github.io/congress/)}
 }
 \examples{
-TBD
+
 }
 \seealso{
 \code{\link{GoogleAPI}}, \code{\link{PopongAP}}

@@ -14,7 +14,7 @@ See
 \url{(https://developers.google.com/civic-information/)}
 }
 \examples{
-TBD
+
 }
 \seealso{
 \code{\link{PopongAPI}}, \code{\link{SunlightAPI}}
