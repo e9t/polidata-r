@@ -12,7 +12,6 @@ Authors@R: c(person("Eunjeong", "Park", role = c("aut", "cre"),
 Author: Eunjeong Park and Jong Hee Park
 Maintainer: Eunjeong Park <ejpark04@snu.ac.kr>
 License: Apache License 2.0
-Imports:
-    jsonlite
+Imports: jsonlite, RCurl
 URL: http://bitbucket.org/e9t/polr
 BugReports: https://bitbucket.org/e9t/polr/issues
