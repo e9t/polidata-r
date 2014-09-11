@@ -9,11 +9,13 @@ Authors@R: c(person("Eunjeong", "Park", role = c("aut", "cre"),
     email = "ejpark04@snu.ac.kr"),
     person("Jong Hee", "Park", role = "aut",
     email = "jongheepark@snu.ac.kr"))
-Author: Eunjeong Park and Jong Hee Park
 Maintainer: Eunjeong Park <ejpark04@snu.ac.kr>
-License: file LICENSE
+License: MIT + file LICENSE
 Imports:
     jsonlite,
     RCurl
+Suggests:
+    knitr
 URL: http://github.com/e9t/polidata-r
 BugReports: https://github.com/e9t/polidata-r/issues
+VignetteBuilder: knitr

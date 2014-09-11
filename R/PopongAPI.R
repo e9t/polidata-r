@@ -6,7 +6,6 @@
 #' @export
 #' @param method Method to call
 #' @param search Search term for names
-#' @param pages Number of pages to retrieve
 #' @param getSummary Toggle to get summary data
 #' @param key API key
 #' @param debug Enable debugging mode

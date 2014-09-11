@@ -1,0 +1,108 @@
+---
+title: "Releasing a new version of polidata"
+author: "Eunjeong Park"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+---
+
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{polidata release process}
+-->
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  error = FALSE,
+  tidy = FALSE
+)
+library(polidata)
+```
+
+# Releasing a new version of polidata
+
+## Release candidate phase
+
+After issues resolved for a given release:
+
+1.  Pass R CMD check.
+
+1.  In DESCRIPTION and NEWS, remove the `-dev` version suffix and increment the
+    version number. For example, 0.9.2-dev becomes 0.9.3.
+
+1.  Do the same for any packages that polidata depends on, if any.
+
+1.  Update polidata's Import dependency versions to use the final releases.
+
+1.  Commit these changes to a new branch (ex: `v0.9.3-rc1`), and push it.
+    
+1.  Check packages that depend on polidata with `devtools::revdep_check()` and
+    run visual tests.
+
+1.  Email people relevant to polidata.
+    
+    ```
+    Hi all,
+    
+    We're very please to announce a release candidate for polidata 0.9.3!
+    
+    We've made sure that polidata 0.9.3 has passed R CMD check.
+    But it's still possible that some bugs may have crept in,
+    so we'd really appreciate it if you'd try it out.
+    It's easy to install the development version: first install 
+    devtools, then run `devtools::install_github("e9t/polidata-r@v0.9.3-rc1")`.
+    
+    We plan to submit polidata to cran in two weeks, May 13, 2014.
+    Please let us know if you have any problems
+    - your feedback is much appreciated.
+    (If you're pretty sure you've discovered a new bug,
+    please start a new thread or file an issue on github,
+    otherwise it's a bit hard to track what's going on).
+    
+    Lucy and Jong Hee
+    ```
+
+1.  Notify cran:
+
+    ```
+    Dear CRAN maintainers,
+    
+    polidata 0.9.3 has entered the release candidate phase and will be
+    submitted to CRAN in two weeks.
+    
+    Included below is the email that I sent to the polidata mailing and all
+    maintainers of packages that depend on polidata.
+    
+    Regards,
+    
+    Lucy and Jong Hee
+    ```
+
+If problems arise during the RC period, make fixes on the branch. Those fixes
+later get merged back into master.
+
+## Release
+
+When the package is accepted on CRAN:
+
+1.  Create a new release at https://github.com/e9t/polidata-r/releases.
+    The tag name should be of the form `v0.9.3`.
+
+1.  Merge the rc branch into master.
+    (Need to get off the rc branch so it can be deleted):
+
+    ```
+    git checkout master
+    git merge v0.9.3
+    ```
+
+1.  Delete the rc branch, with:
+
+    ```
+    git branch -d v0.9.3-rc1
+    git push origin :v0.9.3-rc1
+    ```
