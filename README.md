@@ -19,6 +19,8 @@ Import `polidata`, and initialize with API keys.
     library("polidata")
     InitPolidata()
 
+> To set an individual API key, `options(GoogleAPIKey='some_key')`
+
 Call API with method type.
 
     PopongAPI("bill")
