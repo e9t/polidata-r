@@ -1,6 +1,8 @@
 .apiJson <- system.file("extdata", "api.json", package="polidata")
 
 
+#' Print information about the APIs accessible through polidata
+#'
 #' @export apiInfo
 apiInfo <- jsonlite::fromJSON(.apiJson)
 
