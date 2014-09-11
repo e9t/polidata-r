@@ -8,12 +8,11 @@
 #' @param key API key
 #' @param debug Enable debugging mode
 #' @keywords API
-#' @seealso \code{\link{GoogleAPI}}, \code{\link{PopongAP}}
+#' @seealso \code{\link{GoogleAPI}}, \code{\link{PopongAPI}}
 #'
 
-SunlightAPI <- function(method, key=getOption("polrSunlightKey"), debug=FALSE) {
+SunlightAPI <- function(method, key=getOption("SunlightAPIKey"), debug=FALSE) {
     # TODO: auto navigate pages
-    # TODO: get API key with `getOption`
     apiSource   <- "sunlight"
     apiAttrs    <- eval(parse(text=sprintf("apiInfo$%s", apiSource)))
 

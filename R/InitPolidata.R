@@ -1,8 +1,8 @@
-#' Initialize PolR
+#' Initialize polidata
 #'
 #' @export
 
-InitPolr <- function() {
+InitPolidata <- function() {
 
     for(apiSource in apiSources) {
         reply <- ""

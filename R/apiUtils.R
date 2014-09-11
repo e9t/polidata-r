@@ -1,4 +1,4 @@
-.apiJson <- system.file("extdata", "api.json", package="polr")
+.apiJson <- system.file("extdata", "api.json", package="polidata")
 
 
 #' @export apiInfo
@@ -9,7 +9,7 @@ apiSources <- sapply(ls(apiInfo), Capitalize)
 
 
 GetAPIKey <- function(apiSource) {
-    apiKey <- getOption(sprintf("polr%sKey", apiSource))
+    apiKey <- getOption(sprintf("%sAPIKey", apiSource))
     if(is.null(apiKey)) apiKey <- ""
     return(apiKey)
 }
@@ -25,7 +25,7 @@ MethodInAPI <- function(apiSource, method) {
 
 SetAPIKey <- function(apiSource) {
     apiKey = readline(sprintf("Enter %s API key: ", apiSource))
-    eval(parse(text=sprintf("options(polr%sKey='%s')", apiSource, apiKey)))
+    eval(parse(text=sprintf("options(%sAPIKey='%s')", apiSource, apiKey)))
 }
 
 

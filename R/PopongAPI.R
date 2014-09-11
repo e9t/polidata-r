@@ -6,6 +6,7 @@
 #' @export
 #' @param method Method to call
 #' @param search Search term for names
+#' @param pages Number of pages to retrieve
 #' @param getSummary Toggle to get summary data
 #' @param key API key
 #' @param debug Enable debugging mode
@@ -13,8 +14,7 @@
 #' @seealso \code{\link{GoogleAPI}}, \code{\link{SunlightAPI}}
 #'
 
-PopongAPI <- function(method, search=NULL, getSummary=FALSE, key=getOption("polrPopongKey"), debug=FALSE) {
-    # TODO: auto navigate pages
+PopongAPI <- function(method, search=NULL, getSummary=FALSE, key=getOption("PopongAPIKey"), debug=FALSE) {
     apiSource   <- "popong"
     apiAttrs    <- eval(parse(text=sprintf("apiInfo$%s", apiSource)))
     apiVersion  <- paste0("v", apiAttrs$version)
@@ -29,7 +29,7 @@ PopongAPI <- function(method, search=NULL, getSummary=FALSE, key=getOption("polr
         query <- list("api_key"=key, "q"=search)
     }
 
-    url   <- FormatURL(paths, query)
+    url      <- FormatURL(paths, query)
     jsontext <- RCurl::getURL(url)
     response <- jsonlite::fromJSON(jsontext)
 

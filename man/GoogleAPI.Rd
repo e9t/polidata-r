@@ -2,7 +2,7 @@
 \alias{GoogleAPI}
 \title{R interface for Google Civic API}
 \usage{
-GoogleAPI(method, key = getOption("polrGoogleKey"), debug = FALSE)
+GoogleAPI(method, key = getOption("GoogleAPIKey"), debug = FALSE)
 }
 \arguments{
   \item{method}{method to call}

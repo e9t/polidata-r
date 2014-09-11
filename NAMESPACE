@@ -1,5 +1,5 @@
 export(GoogleAPI)
-export(InitPolr)
+export(InitPolidata)
 export(PopongAPI)
 export(ShowAPIKeys)
 export(SunlightAPI)

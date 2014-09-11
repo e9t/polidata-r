@@ -2,7 +2,7 @@
 \alias{SunlightAPI}
 \title{R interface for Sunlight API}
 \usage{
-SunlightAPI(method, key = getOption("polrSunlightKey"), debug = FALSE)
+SunlightAPI(method, key = getOption("SunlightAPIKey"), debug = FALSE)
 }
 \arguments{
   \item{method}{method to call}
@@ -15,7 +15,7 @@ SunlightAPI(method, key = getOption("polrSunlightKey"), debug = FALSE)
 See \url{(https://sunlightlabs.github.io/congress/)}
 }
 \seealso{
-\code{\link{GoogleAPI}}, \code{\link{PopongAP}}
+\code{\link{GoogleAPI}}, \code{\link{PopongAPI}}
 }
 \keyword{API}
 

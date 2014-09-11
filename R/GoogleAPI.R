@@ -11,9 +11,8 @@
 #' @seealso \code{\link{PopongAPI}}, \code{\link{SunlightAPI}}
 #'
 
-GoogleAPI <- function(method, key=getOption("polrGoogleKey"), debug=FALSE) {
+GoogleAPI <- function(method, key=getOption("GoogleAPIKey"), debug=FALSE) {
     # TODO: auto navigate pages
-    # TODO: get API key with `getOption`
     apiSource   <- "google"
     apiAttrs    <- eval(parse(text=sprintf("apiInfo$%s", apiSource)))
     apiVersion  <- paste0("v", as.integer(apiAttrs$version))
