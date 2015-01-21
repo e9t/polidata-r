@@ -7,7 +7,7 @@ Description: Provides easy access to various political data APIs
     (https://sunlightlabs.github.io/congress/) for US Congress data, and POPONG
     API (http://data.popong.com/) for South Korea National Assembly data.
 Version: 0.1.1
-Date: 2014-06-13
+Date: 2015-01-21
 Authors@R: c(person("Eunjeong", "Park", role = c("aut", "cre"),
     email = "ejpark04@snu.ac.kr"),
     person("Jong Hee", "Park", role = "aut",
