@@ -9,6 +9,8 @@
 #' @param getSummary Toggle to get summary data
 #' @param key API key
 #' @param debug Enable debugging mode
+#' @param pages Number of pages to retrieve
+#' @param pageSize Number of items in each page
 #' @keywords API
 #' @seealso \code{\link{GoogleAPI}}, \code{\link{SunlightAPI}}
 #'
