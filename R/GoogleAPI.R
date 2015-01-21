@@ -1,6 +1,6 @@
 #' R interface for Google Civic API
 #'
-#' See \url{(https://developers.google.com/civic-information/)}
+#' See \url{https://developers.google.com/civic-information/}
 #'
 #' @import jsonlite RCurl
 #' @export

@@ -1,6 +1,6 @@
 #' R interface for Sunlight API
 #'
-#' See \url{(https://sunlightlabs.github.io/congress/)}
+#' See \url{https://sunlightlabs.github.io/congress/}
 #'
 #' @import jsonlite
 #' @export

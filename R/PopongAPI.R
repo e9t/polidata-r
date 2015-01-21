@@ -1,6 +1,6 @@
 #' R interface for Popong API
 #'
-#' See \url{(http://data.popong.com)}
+#' See \url{http://data.popong.com}
 #'
 #' @import jsonlite RCurl
 #' @export
