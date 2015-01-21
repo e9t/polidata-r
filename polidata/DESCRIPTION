@@ -1,6 +1,6 @@
 Package: polidata
 Type: Package
-Title: Political Data Interface in R
+Title: Political Data Interface
 Description: Provides easy access to various political data APIs
     directly from R. For example, you can access Google Civic Information API
     (https://developers.google.com/civic-information/) or Sunlight Congress API
