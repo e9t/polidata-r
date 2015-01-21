@@ -8,6 +8,7 @@ getwd()
 # Check  http://r-pkgs.had.co.nz/check.html
 library(devtools)
 devtools::check()
+devtools::build_win()
 
 # Release http://r-pkgs.had.co.nz/release.html#release-submission
 devtools::release()
